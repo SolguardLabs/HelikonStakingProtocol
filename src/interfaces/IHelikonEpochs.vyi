@@ -1,0 +1,661 @@
+# pragma version ^0.4.0
+
+# @title IHelikonEpochs
+# @notice Public integration surface for Helikon module adapters.
+
+interface IHelikonEpochs:
+    def module_id() -> uint256: view
+    def module_version() -> String[32]: view
+    def protocol_epoch() -> uint256: view
+    def protocol_weight() -> uint256: view
+    def protocol_liquidity() -> uint256: view
+    def quote_metric_130(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_130(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_130(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_130(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_131(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_131(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_131(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_131(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_132(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_132(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_132(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_132(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_133(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_133(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_133(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_133(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_134(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_134(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_134(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_134(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_135(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_135(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_135(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_135(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_136(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_136(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_136(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_136(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_137(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_137(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_137(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_137(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_138(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_138(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_138(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_138(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_139(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_139(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_139(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_139(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_140(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_140(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_140(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_140(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_141(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_141(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_141(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_141(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_142(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_142(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_142(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_142(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_143(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_143(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_143(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_143(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_144(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_144(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_144(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_144(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_145(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_145(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_145(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_145(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_146(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_146(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_146(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_146(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_147(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_147(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_147(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_147(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_148(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_148(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_148(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_148(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_149(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_149(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_149(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_149(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_150(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_150(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_150(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_150(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_151(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_151(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_151(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_151(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_152(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_152(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_152(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_152(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_153(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_153(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_153(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_153(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_154(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_154(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_154(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_154(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_155(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_155(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_155(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_155(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_156(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_156(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_156(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_156(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_157(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_157(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_157(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_157(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_158(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_158(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_158(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_158(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_159(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_159(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_159(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_159(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_160(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_160(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_160(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_160(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_161(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_161(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_161(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_161(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_162(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_162(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_162(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_162(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_163(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_163(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_163(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_163(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_164(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_164(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_164(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_164(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_165(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_165(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_165(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_165(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_166(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_166(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_166(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_166(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_167(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_167(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_167(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_167(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_168(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_168(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_168(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_168(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_169(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_169(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_169(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_169(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_170(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_170(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_170(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_170(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_171(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_171(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_171(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_171(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_172(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_172(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_172(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_172(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_173(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_173(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_173(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_173(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_174(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_174(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_174(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_174(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_175(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_175(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_175(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_175(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_176(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_176(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_176(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_176(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_177(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_177(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_177(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_177(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_178(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_178(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_178(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_178(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_179(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_179(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_179(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_179(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_180(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_180(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_180(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_180(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_181(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_181(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_181(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_181(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_182(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_182(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_182(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_182(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_183(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_183(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_183(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_183(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_184(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_184(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_184(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_184(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_185(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_185(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_185(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_185(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_186(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_186(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_186(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_186(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_187(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_187(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_187(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_187(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_188(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_188(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_188(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_188(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_189(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_189(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_189(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_189(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_190(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_190(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_190(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_190(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_191(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_191(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_191(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_191(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_192(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_192(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_192(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_192(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_193(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_193(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_193(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_193(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_194(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_194(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_194(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_194(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_195(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_195(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_195(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_195(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_196(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_196(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_196(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_196(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_197(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_197(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_197(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_197(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_198(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_198(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_198(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_198(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_199(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_199(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_199(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_199(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_200(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_200(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_200(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_200(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_201(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_201(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_201(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_201(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_202(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_202(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_202(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_202(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_203(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_203(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_203(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_203(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_204(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_204(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_204(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_204(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_205(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_205(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_205(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_205(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_206(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_206(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_206(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_206(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_207(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_207(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_207(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_207(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_208(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_208(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_208(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_208(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_209(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_209(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_209(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_209(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_210(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_210(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_210(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_210(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_211(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_211(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_211(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_211(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_212(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_212(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_212(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_212(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_213(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_213(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_213(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_213(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_214(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_214(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_214(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_214(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_215(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_215(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_215(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_215(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_216(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_216(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_216(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_216(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_217(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_217(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_217(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_217(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_218(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_218(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_218(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_218(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_219(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_219(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_219(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_219(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_220(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_220(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_220(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_220(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_221(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_221(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_221(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_221(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_222(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_222(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_222(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_222(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_223(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_223(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_223(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_223(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_224(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_224(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_224(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_224(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_225(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_225(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_225(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_225(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_226(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_226(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_226(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_226(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_227(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_227(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_227(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_227(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_228(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_228(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_228(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_228(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_229(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_229(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_229(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_229(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_230(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_230(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_230(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_230(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_231(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_231(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_231(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_231(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_232(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_232(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_232(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_232(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_233(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_233(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_233(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_233(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_234(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_234(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_234(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_234(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_235(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_235(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_235(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_235(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_236(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_236(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_236(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_236(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_237(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_237(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_237(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_237(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_238(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_238(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_238(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_238(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_239(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_239(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_239(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_239(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_240(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_240(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_240(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_240(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_241(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_241(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_241(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_241(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_242(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_242(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_242(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_242(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_243(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_243(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_243(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_243(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_244(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_244(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_244(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_244(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_245(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_245(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_245(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_245(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_246(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_246(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_246(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_246(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_247(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_247(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_247(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_247(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_248(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_248(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_248(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_248(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_249(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_249(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_249(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_249(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_250(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_250(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_250(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_250(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_251(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_251(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_251(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_251(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_252(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_252(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_252(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_252(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_253(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_253(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_253(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_253(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_254(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_254(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_254(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_254(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_255(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_255(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_255(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_255(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_256(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_256(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_256(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_256(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_257(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_257(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_257(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_257(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_258(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_258(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_258(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_258(operator: address, position_id: uint256) -> bool: view
+
+    def quote_metric_259(account: address, position_id: uint256, amount: uint256) -> uint256: view
+    def preview_limit_259(position_id: uint256, timestamp: uint256) -> (uint256, uint256): view
+    def read_checkpoint_259(position_id: uint256) -> (uint256, uint256, uint256): view
+    def can_execute_259(operator: address, position_id: uint256) -> bool: view
+
