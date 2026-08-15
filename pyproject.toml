@@ -1,3 +1,9 @@
+[project]
+name = "helikon-staking-protocol"
+version = "1.0.0"
+description = "Modular Vyper staking and epoch reward accounting"
+requires-python = ">=3.12"
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["."]
