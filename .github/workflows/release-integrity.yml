@@ -1,0 +1,35 @@
+name: Release integrity
+
+on:
+  push:
+    branches: [main, production]
+    tags: ["v*"]
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: integrity-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.release.tag_name || github.ref }}
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: python -m pip install --disable-pip-version-check -r requirements.txt
+      - run: python scripts/ci.py
+      - run: python scripts/verify_published_ref.py
+        env:
+          VERIFY_EVENT: ${{ github.event_name }}
+          VERIFY_REF_TYPE: ${{ github.ref_type }}
+          VERIFY_REF_NAME: ${{ github.ref_name }}

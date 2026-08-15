@@ -1,65 +1,148 @@
+![HelikonStakingProtocol](assets/banner.png)
+
 # Helikon Staking Protocol
 
-![banner](./assets/banner.png)
+Helikon es un protocolo modular de staking en Vyper para activos ERC-20. Separa custodia de principal, emisión por épocas, niveles de boost temporales, penalizaciones de salida, observabilidad y política de solvencia. Un SDK Python reproduce las métricas críticas con aritmética entera.
 
-Helikon is a Vyper staking protocol for ERC-20 assets with epoch rewards, temporary boost tiers, and early exit penalties. The protocol separates custody, boost policy, reward emission, reserve accounting, lens reads, and operational monitoring into independent modules.
+## Componentes
 
-## Architecture
-
-```text
-HelikonAccess       roles, pauses, and operational authorities
-BoostTierRegistry  boost multipliers, durations, renewal delays, and fees
-EpochRewarder      epoch budgets, reward index, funding, and payouts
-HelikonStakingVault principal custody, positions, boosts, claims, exits
-PenaltyReserve     penalty custody and treasury withdrawals
-HelikonLens        frontend and indexer reads
-HelikonMonitor     keeper-oriented health checks
-HelikonToken       local ERC-20 implementation for tests and demos
+```mermaid
+flowchart LR
+    U["Staker"] --> V["HelikonStakingVault"]
+    V --> R["EpochRewarder"]
+    V --> B["BoostTierRegistry"]
+    V --> P["PenaltyReserve"]
+    V --> A["HelikonAccess"]
+    V --> L["HelikonLens"]
+    V --> M["HelikonMonitor"]
+    M --> S["RewardSolvencyController"]
 ```
 
-## Requirements
+| Módulo | Función |
+| --- | --- |
+| `HelikonStakingVault` | principal, posiciones, peso y salidas |
+| `EpochRewarder` | presupuestos, índice global y pagos |
+| `BoostTierRegistry` | multiplicadores, duración, tarifa y renovación |
+| `PenaltyReserve` | custodia y conciliación de penalizaciones |
+| `HelikonAccess` | roles, pausa y relevo administrativo |
+| `HelikonLens` | lecturas agregadas para clientes |
+| `HelikonMonitor` | señales de salud para operadores |
+| `RewardSolvencyController` | cobertura, concentración y déficit proyectado |
 
-- Python 3.11 or newer.
-- Vyper 0.4.x.
-- pytest.
+## Economía de recompensas
+
+```text
+w_i = principal_i × multiplierBps_i / 10 000
+I[t+1] = I[t] + emission[t] × 10²⁷ / totalWeight[t]
+reward_i = w_i × (I[now] - I[paid]) / 10²⁷
+```
+
+Las épocas fijan presupuesto, tasa y duración. El índice distribuye únicamente la emisión transcurrida y queda acotado por el presupuesto disponible.
+
+```mermaid
+sequenceDiagram
+    participant G as Gobierno
+    participant R as Rewarder
+    participant V as Vault
+    participant U as Staker
+    G->>R: fund y schedule epoch
+    U->>V: stake
+    V->>R: sync total weight
+    U->>V: claim
+    V->>R: sync y pay reward
+    R-->>U: token de recompensa
+```
+
+## Boost temporal
+
+Un nivel define multiplicador, principal mínimo y máximo, duración, espera de renovación, tarifa y penalización. La activación materializa primero el índice y después sustituye el peso de la posición.
+
+```mermaid
+stateDiagram-v2
+    [*] --> Base: stake
+    Base --> Boosted: activate boost
+    Boosted --> Base: expiry refresh
+    Boosted --> Boosted: accrue
+    Base --> Closing: unstake total
+    Boosted --> Closing: unstake total
+    Closing --> Closed
+    Closed --> [*]
+```
+
+## Solvencia proyectada
+
+El controlador suma obligación devengada y emisión del horizonte, la compara con recompensas financiadas aún disponibles y calcula concentración de peso:
+
+```text
+available = funded - paid
+accrued = max(emitted - paid, 0)
+projected = accrued + horizonEmission
+coverageBps = available × 10 000 / projected
+capitalGap = max(projected - available, 0)
+spreadBps = max(accountingWeight - baseWeight, 0) × 10 000 / baseWeight
+```
+
+```mermaid
+flowchart TD
+    F["Rewards funded"] --> A["Available"]
+    P["Rewards paid"] --> A
+    E["Rewards emitted"] --> L["Accrued liability"]
+    H["Horizon emission"] --> Q["Projected liability"]
+    L --> Q
+    A --> C["Coverage"]
+    Q --> C
+    C --> G["Capital gap"]
+    W["Weight spread"] --> S["Severity"]
+    G --> S
+```
+
+## Inicio rápido
+
+Requisitos: Python 3.12 y Vyper 0.4.3.
 
 ```bash
 python -m venv .venv
-. .venv/bin/activate
+source .venv/bin/activate
 python -m pip install -r requirements.txt
 python scripts/compile_sources.py
 python -m pytest -q
+python scripts/verify_release.py
 ```
 
-On Windows PowerShell:
+En PowerShell, activa el entorno con `.venv\Scripts\Activate.ps1`.
 
-```powershell
-python -m venv .venv
-.venv\Scripts\python.exe -m pip install -r requirements.txt
-.venv\Scripts\python.exe scripts\compile_sources.py
-.venv\Scripts\python.exe -m pytest -q
+## SDK Python
+
+```python
+from sdk.helikon import RewardSnapshot, assess_solvency
+
+assessment = assess_solvency(RewardSnapshot(
+    principal=1_000_000,
+    base_weight=1_000_000,
+    accounting_weight=1_200_000,
+    rewards_funded=500_000,
+    rewards_paid=100_000,
+    rewards_emitted=250_000,
+    horizon_emission=100_000,
+))
+print(assessment.coverage_bps, assessment.severity)
 ```
 
-## Protocol Flow
+## Calidad y publicación
 
-1. Governance configures roles, reward epochs, and boost tiers.
-2. Stakers deposit principal into `HelikonStakingVault`.
-3. Epoch emissions update a global reward index using active accounting weight.
-4. Stakers can activate temporary boosts with configured durations and fees.
-5. Claims materialize pending rewards from `EpochRewarder`.
-6. Early exits apply a time-based penalty credited to `PenaltyReserve`.
-7. Keepers close epochs and monitor solvency through `HelikonMonitor`.
+`python scripts/ci.py` compila bytecode, valida sintaxis Python, ejecuta pruebas y comprueba integridad documental. GitHub repite la puerta en Ubuntu y Windows. `main`, `production` y la etiqueta anotada de una versión publicada deben identificar el mismo commit.
 
-## Layout
+## Documentación
 
-```text
-src/                  Vyper protocol modules and public interfaces
-tests/                Python behavior tests
-scripts/              compile, test, and CI entrypoints
-.github/workflows/    GitHub Actions workflow
-.vscode/              editor tasks and recommendations
-```
+- [Arquitectura](docs/arquitectura.md)
+- [Modelo de recompensas](docs/modelo-recompensas.md)
+- [Boosts y posiciones](docs/boosts-y-posiciones.md)
+- [Solvencia](docs/solvencia.md)
+- [Operación](docs/operacion.md)
+- [Integración](docs/integracion.md)
+- [Gobernanza](docs/gobernanza.md)
+- [Política de seguridad](SECURITY.md)
 
-## Security
+## Licencia
 
-See `SECURITY.md` for review scope, invariants, dependency policy, and reporting process.
+MIT. Consulta [LICENSE](LICENSE).
