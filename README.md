@@ -1,6 +1,6 @@
-![HelikonStakingProtocol](assets/banner.png)
-
 # Helikon Staking Protocol
+
+![HelikonStakingProtocol](assets/banner.png)
 
 Helikon es un protocolo modular de staking en Vyper para activos ERC-20. Separa custodia de principal, emisión por épocas, niveles de boost temporales, penalizaciones de salida, observabilidad y política de solvencia. Un SDK Python reproduce las métricas críticas con aritmética entera.
 
